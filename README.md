@@ -2,6 +2,7 @@
 
 ## Description
 
+E-commerce backend application that uses ORM.
 
 ### User Story
 
@@ -14,7 +15,6 @@ SO THAT my company can compete with other e-commerce companies
 - [Acceptance Criteria](#acceptance-criteria)
 - [Assets](#assets)
 - [Installation](#installation)
-- [Walkthrough Video](#walkthrough)
 - [Github Link](#github-link)
 
 ## Acceptance Criteria
@@ -45,13 +45,6 @@ THEN I am able to successfully create, update, and delete data in my database
 * run $ npm install in command line
 * run $ nodemon server to start the server 
 
-## Walkthrough Video
-
-* [Demo Video]()
-
-## Screenshots
-
-![]()
 
 ## Github Link
 
