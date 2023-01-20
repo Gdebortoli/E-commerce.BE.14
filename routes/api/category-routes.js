@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
   // find all categories
   Category.findAll({
     include: [{
-      model: Product
+      model: Product, 
+      attributes: ['product_name'],
     }]
   })
     .then(dbCategoryData => res.json(dbCategoryData))
@@ -26,11 +27,12 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     include: [{
-      model: Product
+      model: Product, 
+      attributes: ['product_name'],
     }]
   })
-    .then(categoryData => {
-      res.json()
+    .then(dbCategoryData => {
+      res.json(dbCategoryData)
     })
     .catch(err => {
       console.log(err);
@@ -44,6 +46,7 @@ router.post('/', (req, res) => {
     category_text: req.body.category_text,
     user_id: req.body.user_id,
     post_id: req.body.post_id
+    // ...body
   })
     .then(dbCategoryData => res.json(dbCategoryData))
     .catch(err => {
@@ -54,11 +57,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-  Category.update(
-    {
-      category_name: req.body.category_name,
-    },
-    {
+  Category.update(req.body, {
       where: {
         id: req.params.id
       },
@@ -75,8 +74,7 @@ router.put('/:id', (req, res) => {
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
-    });
-
+    })
 });
 
 router.delete('/:id', (req, res) => {
