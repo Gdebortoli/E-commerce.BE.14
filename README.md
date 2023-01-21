@@ -15,6 +15,7 @@ SO THAT my company can compete with other e-commerce companies
 - [Acceptance Criteria](#acceptance-criteria)
 - [Assets](#assets)
 - [Installation](#installation)
+- [Walkthough Video](#walkthough-video)
 - [Github Link](#github-link)
 
 ## Acceptance Criteria
@@ -38,15 +39,53 @@ THEN I am able to successfully create, update, and delete data in my database
 * MySQL2
 * Sequelize
 * dotenv
+* insomnia 
+* npm 
+* express
 
 ## Installation
 
-* Clone the repository
-* run $ npm install in command line
-* run $ nodemon server to start the server 
+Clone the repository, then in the command line enter the following:
+
+To start the mysql server. Type 
+~~~ 
+npm mysql -u root -p 
+~~~ 
+To install all package dependancies. Type 
+~~~ 
+npm install 
+~~~ 
+To start the mysql server. Type 
+~~~ 
+npm mysql -u root -p 
+~~~ 
+Connect to the mysql server
+~~~ 
+source db/schema.sql
+~~~ 
+Exit mysql server. Type
+~~~ 
+quit
+~~~ 
+Seed the db. Type 
+~~~ 
+npm run seed
+~~~ 
+To start the server on your localhost.
+~~~ 
+npm start 
+~~~ 
+
+* open insomnoa or postman 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Walk through Video
+
+![Walkthrough](https://drive.google.com/file/d/14gou3z5_d1544BZFuCHXgZY8gSYm7c7G/view)
 
 
 ## Github Link
 
-Click here for the link to my [Github Respository](https://github.com/Gdebortoli/E-commerce.BE.14) 
+Click here for the link to my [Github Respository](https://github.com/Gdebortoli/bee-comm-any1.3)
 
