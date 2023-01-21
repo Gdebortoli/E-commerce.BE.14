@@ -1,7 +1,7 @@
-// Environmental variables 
-require('dotenv').config();
 // import the Sequelize constructor from the library
 const Sequelize = require('sequelize');
+// Environmental variables 
+require('dotenv').config();
 // create connection/route to our database
 
 let sequelize;
